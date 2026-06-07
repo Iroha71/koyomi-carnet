@@ -15,6 +15,7 @@ android {
     defaultConfig {
         applicationId = "com.iroha71.koyomi_carnet"
         minSdk = 24
+        //noinspection OldTargetApi
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
