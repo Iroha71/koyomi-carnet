@@ -37,7 +37,7 @@ fun AppLayout(
                     IconButton(onClick = {}) {
                         Icon(
                             imageVector = Icons.Default.Menu,
-                            contentDescription = "",
+                            contentDescription = "メニューを開く",
                             tint = MaterialTheme.colorScheme.onPrimary
                         )
                     }
