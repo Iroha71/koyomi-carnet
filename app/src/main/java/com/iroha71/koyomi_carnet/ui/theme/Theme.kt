@@ -9,7 +9,9 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
+import com.google.android.material.color.MaterialColors
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -18,7 +20,7 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Primary,
+    primary = BrandPrimary,
     onPrimary = Color.White,
     secondary = PurpleGrey40,
     tertiary = Pink40,
@@ -35,10 +37,16 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
+fun Color.harmonizeWithPrimary(): Color {
+    val primary = MaterialTheme.colorScheme.primary.toArgb()
+    return Color(MaterialColors.harmonize(this.toArgb(), primary))
+}
+
+@Composable
 fun KoyomicarnetTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = false,
+    dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
