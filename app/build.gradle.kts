@@ -7,8 +7,8 @@ plugins {
 android {
     namespace = "com.iroha71.koyomi_carnet"
     compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
+        version = release(37) {
+            minorApiLevel = 0
         }
     }
 
@@ -59,4 +59,6 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
+    implementation(libs.androidx.compose.material.icons.extended)
+    implementation(libs.material)
 }
