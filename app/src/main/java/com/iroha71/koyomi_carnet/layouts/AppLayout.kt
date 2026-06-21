@@ -16,7 +16,11 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.iroha71.koyomi_carnet.R
+import com.iroha71.koyomi_carnet.ui.theme.BrandPrimary
+import com.iroha71.koyomi_carnet.ui.theme.harmonizeWithPrimary
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -37,13 +41,13 @@ fun AppLayout(
                     IconButton(onClick = {}) {
                         Icon(
                             imageVector = Icons.Default.Menu,
-                            contentDescription = "メニューを開く",
+                            contentDescription = stringResource(R.string.open_menu),
                             tint = MaterialTheme.colorScheme.onPrimary
                         )
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.primary
+                    containerColor = BrandPrimary.harmonizeWithPrimary()
                 )
             )
         }
