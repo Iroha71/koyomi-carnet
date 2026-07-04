@@ -8,6 +8,8 @@ tools: Read, Grep, Glob
 
 ## プロジェクトのアーキテクチャ規約
 
+以下のパス表記は `app/src/main/java/com/iroha71/koyomi_carnet/` からの相対パス。
+
 - `MainActivity` が `KoyomicarnetTheme` でラップした `AppNavHost` を唯一のエントリポイントとして描画する
 - 画面遷移は `routes/AppNavHost.kt` の `NavHost` と `routes/Routes.kt` の `@Serializable` object（型安全Navigation）で行う
 - 各画面（`views/` 配下）は `layouts/AppLayout.kt` の `AppLayout` composable でラップして実装する

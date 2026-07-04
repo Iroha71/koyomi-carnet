@@ -60,7 +60,7 @@ android {
 
 ## テストファイルの配置と命名
 
-- 配置場所: `app/src/test/java/com/iroha71/koyomi_carnet/` 配下に、テスト対象と同じパッケージ構成で置く（例: `views/Home.kt` 内のロジックなら `.../test/.../views/HomeTest.kt`）。
+- 配置場所: `app/src/test/java/com/iroha71/koyomi_carnet/` 配下に、テスト対象と同じパッケージ構成で置く（例: `app/src/main/java/com/iroha71/koyomi_carnet/views/Home.kt` 内のロジックなら `app/src/test/java/com/iroha71/koyomi_carnet/views/HomeTest.kt`）。
 - ファイル名: `<テスト対象クラス・ファイル名>Test.kt`
 - 基本は1テスト対象につき1ファイル。関連する複数の小さな関数をまとめたユーティリティファイルの場合は、ファイル単位で1テストファイルにまとめてよい。
 

@@ -8,6 +8,8 @@ tools: Read, Grep, Glob
 
 ## プロジェクト情報
 
+以下のパス表記は `app/src/main/java/com/iroha71/koyomi_carnet/` からの相対パス。
+
 - UI: Jetpack Compose（BOM管理）+ Material3
 - Navigation: Compose Navigation（型安全Navigation、`routes/Routes.kt` / `routes/AppNavHost.kt`）
 - 画面: `views/` 配下の `@Composable` 関数、`layouts/AppLayout.kt` の `Scaffold` でラップ
