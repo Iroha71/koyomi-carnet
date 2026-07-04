@@ -3,4 +3,5 @@
     <string name="home_title">ホーム</string>
     <string name="about_title">About</string>
     <string name="open_menu">メニューを開く</string>
+    <string name="usable_payment">利用可能額</string>
 </resources>
