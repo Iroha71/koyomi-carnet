@@ -2,7 +2,6 @@ package com.iroha71.koyomi_carnet.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -12,17 +11,12 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ProgressIndicatorDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.blur
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Outline
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -32,7 +26,6 @@ import com.iroha71.koyomi_carnet.ui.theme.BrandPrimary
 import com.iroha71.koyomi_carnet.ui.theme.KoyomicarnetTheme
 import com.iroha71.koyomi_carnet.ui.theme.harmonizeWithPrimary
 import com.iroha71.koyomi_carnet.utils.formatYen
-import java.util.concurrent.Executor
 
 @Composable
 fun BalanceView(
@@ -69,11 +62,11 @@ fun BalanceView(
 }
 
 fun getBudgetProgress(budget: Int, expense: Int): Float {
-    return (expense.toFloat() / budget.toFloat());
+    return (expense.toFloat() / budget.toFloat())
 }
 
 fun getUsablePayment(budget: Int, expense: Int): Int {
-    return budget - expense;
+    return budget - expense
 }
 
 @Preview(showBackground = true)
